@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // 🍭클래스 호이스팅(Hoisting)
+
+        // [1] 호이스팅이란?
+        // 자바스크립트는 기본적으로 모든 선언문(var, let, const, function, class)을 >> 호이스팅
+        // 호이스팅 >> 스코프 안의 어디서든 변수 선언은 최상위에서 선언한 것과 동일한 상태
+        // TDZ(Temporal Dead Zone) >> 사각지대
+        // Dead Zone >> let, const, class
+        // 초기화를 하면 존재를 알 수 있다.
+
+        // var a = 111; //>> 전역변수
+        // console.log(a) //111
+
+        // function myFun(){
+        //     var a = 333;
+        //     //console.log(a) //333
+        // }
+
+        // myFun()
+
+
+        // console.log(a)
+        // var a = 111;
+        // myFun()
+
+        // function myFun(){
+        //     var a = 333;
+        // }
+
+        // console.log(a)
+
+
+        //console.log(a) //err
+        let a = 111;
+        //let a = 222; //err
+        
+        function myFun(){
+            let a = 333;
+        }
+        console.log(a)
+
+        // 🍍class 만들기
+        class Person{
+
+        }
+        let coffee = new Person();
+        console.log(coffee)
+
+        console.log(Person)
+
+        
+    </script>
+
+    <script>
+    //var 변수 선언과 함수선언문에서만 호이스팅이 일어난다.
+
+    // var myname; // [Hoisting] "선언"
+    // console.log("hello");
+    // myname = "HEEE"; // "할당"
+    // let myname2 = "HEEE2"; // [Hoisting] 발생 X
+
+
+    // foo();
+    // foo2();
+
+    // function foo() { // 함수선언문
+    //     console.log("hello");
+    // }
+    // var foo2 = function() { // 함수표현식
+    //     console.log("hello2");
+    // }
+
+
+    // var foo2; // [Hoisting] 함수표현식의 변수값 "선언"
+
+    // function foo() { // [Hoisting] 함수선언문
+    //     console.log("hello");
+    // }
+    </script>
+</body>
+</html>
+
